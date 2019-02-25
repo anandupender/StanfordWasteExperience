@@ -1,5 +1,10 @@
 var data = [
  {
+   "Image": "brownpaperbag.png",
+   "bin": "paper",
+   "incorrect": "If there is no food in it, put it in the paper bin! Otherwise, compost is your best bet. "
+ },
+ {
    "Image": "bubblewrap.png",
    "bin": "paper",
    "incorrect": "This one is tricky. Clear plastics like cling and bubble wrap are sorted with the paper recycling at Stanford, so be sure to remember this!"

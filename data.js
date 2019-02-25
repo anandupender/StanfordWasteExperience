@@ -1,10 +1,5 @@
 var data = [
  {
-   "Image": "brownpaperbag.png",
-   "bin": "compost",
-   "incorrect": "If there is no food in it, put it in the paper bin! Otherwise, compost is your best bet. "
- },
- {
    "Image": "bubblewrap.png",
    "bin": "paper",
    "incorrect": "This one is tricky. Clear plastics like cling and bubble wrap are sorted with the paper recycling at Stanford, so be sure to remember this!"
@@ -98,11 +93,6 @@ var data = [
    "Image": "starbucks coffee lid.png",
    "bin": "compost",
    "incorrect": "Some Starbucks locations have compostable lids while others do not. Be sure to check for the compostable symbol on the lid to be sure! Otherwise, landfill it. "
- },
- {
-   "Image": "starbucks coffee sleeve.png",
-   "bin": "paper",
-   "incorrect": "This is corrugated cardboard, so if you have access to that bin, use it! Otherwise, compost it or put it in the paper recycling. "
  },
  {
    "Image": "starbucks cup.png",

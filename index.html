@@ -9,7 +9,7 @@
   </head>
   <body>
 
-    <img src="images/objects/brownpaperbag.png" class="waste-image" id="landfill"/>
+    <img src="images/objects/brownpaperbag.png" class="waste-image" id="paper"/>
     <img src="images/conveyor.png" id="conveyor-image"/>
 
     <div id="main-container">
@@ -48,7 +48,10 @@
 
         //add new image
         if(data.length >= 1){
-          var imageInfo = data.pop();
+          var random = Math.floor(Math.random()*data.length);
+          var imageInfo = data[random];
+          data.splice(random, 1);
+
           var image = document.createElement("img");
           image.src = "images/objects/" + imageInfo.Image;
           image.className = "waste-image";

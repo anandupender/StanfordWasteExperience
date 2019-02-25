@@ -9,7 +9,7 @@
   </head>
   <body>
 
-    <img src="images/cup.png" class="waste-image" id="landfill"/>
+    <img src="images/objects/brownpaperbag.png" class="waste-image" id="landfill"/>
     <img src="images/conveyor.png" id="conveyor-image"/>
 
     <div id="main-container">
@@ -32,31 +32,36 @@
       <img src="images/stanfordLogo.png" id="stanford-logo"/>
     </div>
 
+    <script src="data.js"></script>
+
     <script>
 
-      var images = [{"src":"stanfordTree.png", "id":"landfill"}]
+      var currImageText = "If there is no food in it, put it in the paper bin! Otherwise, compost is your best bet.";
 
       var message = document.getElementById("tree-message");
 
       function correctMessage(){
-        message.innerHTML = "Right!";
+        message.innerHTML = "<span style='font-weight:bold'>Right!</span> " + currImageText;
+        setTimeout(function(){ message.innerHTML = "";}, 3000);
+
         message.style.border = "2px solid green";
 
         //add new image
-        if(images.length >= 1){
-          var imageInfo = images.pop();
+        if(data.length >= 1){
+          var imageInfo = data.pop();
           var image = document.createElement("img");
-          image.src = "images/" + imageInfo.src;
+          image.src = "images/objects/" + imageInfo.Image;
           image.className = "waste-image";
-          image.id=imageInfo.id;
+          image.id=imageInfo.bin;
           document.getElementsByTagName("BODY")[0].appendChild(image);
+          currImageText = imageInfo.incorrect;
         }else{
           message.innerHTML = "You're all done!"
         }
       }
 
       function incorrectMessage(){
-        message.innerHTML = "Wrong!";
+        message.innerHTML = "<span style='font-weight:bold'>Wrong!</span> " + currImageText;
         message.style.border = "2px solid red";
       }
       interact('#compost-bin').dropzone({
@@ -140,12 +145,13 @@
         // translate the element
         target.style.webkitTransform =
         target.style.transform =
-          'translate(' + x + 'px, ' + y + 'px)';
+          'translate(' + x + 'px, ' + y + 'px) scale(.5)';
 
         // update the posiion attributes
         target.setAttribute('data-x', x);
         target.setAttribute('data-y', y);
       }
+
 
       window.dragMoveListener = dragMoveListener;
 
@@ -158,8 +164,7 @@
             elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
           },
           autoScroll: true,
-          // dragMoveListener from the dragging demo above
-          onmove: dragMoveListener,
+          onmove: dragMoveListener
         });
     </script>
   </body>

@@ -123,10 +123,5 @@ var data = [
    "Image": "subway straw.png",
    "bin": "landfill",
    "incorrect": "Straws can't be recycled. Try to remove straws from your everyday life, especially if you care about the turtles!"
- },
- {
-   "Image": "used waxpaper takeout box.png",
-   "bin": "landfill",
-   "incorrect": "Wax paper cannot be recycled because they are made of paper and plastic. Try to go without them, but if you use one, landfill it. "
  }
 ];

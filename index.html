@@ -42,7 +42,6 @@
 
       function correctMessage(){
         message.innerHTML = "<span style='font-weight:bold'>Right!</span> " + currImageText;
-        setTimeout(function(){ message.innerHTML = "";}, 1500);
 
         message.style.border = "2px solid green";
 
@@ -87,7 +86,7 @@
 
       interact('#paper-bin').dropzone({
         accept: '.waste-image',
-        overlap: 1.0,
+        overlap: .8,
 
         ondrop: function (event) {
           var draggableElement = event.relatedTarget;
@@ -105,7 +104,7 @@
 
       interact('#plastic-bin').dropzone({
         accept: '.waste-image',
-        overlap: 1.0,
+        overlap: .8,
 
         ondrop: function (event) {
           var draggableElement = event.relatedTarget;
@@ -123,7 +122,7 @@
 
       interact('#landfill-bin').dropzone({
         accept: '.waste-image',
-        overlap: 1.0,
+        overlap: .8,
 
         ondrop: function (event) {
           var draggableElement = event.relatedTarget;
